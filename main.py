@@ -34,9 +34,6 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
-def app(environ, start_response):
-    start_response("200 OK", [("Content-Type", "text/plain")])
-    return [b"Python backend is working"]
 
 # CORS configuration
 app.add_middleware(
@@ -71,3 +68,9 @@ async def health_check():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"status": "FastAPI backend is working"}
