@@ -34,6 +34,9 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+def app(environ, start_response):
+    start_response("200 OK", [("Content-Type", "text/plain")])
+    return [b"Python backend is working"]
 
 # CORS configuration
 app.add_middleware(
