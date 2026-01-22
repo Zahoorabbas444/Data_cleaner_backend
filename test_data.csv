@@ -1,0 +1,17 @@
+Name,Age,Email,Salary,Join Date,Department
+  John Doe  ,28,john@example.com,50000,2023-01-15,Engineering
+Jane Smith,35,jane@example.com,65000,2022-06-20,Marketing
+  Bob Johnson  ,42,bob@example.com,,2021-03-10,Sales
+Alice Brown,31,alice@example.com,55000,2023-05-01,Engineering
+Charlie Wilson,29,charlie@example.com,48000,invalid-date,Marketing
+,,,,,
+David Lee,38,david@example.com,72000,2020-11-30,Engineering
+Emma Davis,26,emma@example.com,45000,2023-08-15,Sales
+Frank Miller,45,frank@example.com,80000,2019-02-28,Management
+Grace Taylor,33,grace@example.com,58000,2022-09-12,Marketing
+Henry Clark,40,henry@example.com,not_a_number,2021-07-22,Sales
+Ivy Anderson,27,ivy@example.com,52000,2023-03-05,Engineering
+Jack Thomas,36,jack@example.com,67000,2022-01-18,Management
+Kate White,30,kate@example.com,54000,2023-06-30,Marketing
+John Doe,28,john@example.com,50000,2023-01-15,Engineering
+Leo Harris,44,leo@example.com,75000,2020-04-14,Sales
