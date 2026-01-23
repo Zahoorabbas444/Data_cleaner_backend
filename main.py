@@ -44,6 +44,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"status": "FastAPI backend is working"}
+
 
 # Include routers
 app.include_router(upload_router)
@@ -67,15 +71,9 @@ async def health_check():
     return {"status": "healthy"}
 
 
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-@app.get("/")
-def root():
-    return {"status": "FastAPI backend is working"}
-
 
 
 
