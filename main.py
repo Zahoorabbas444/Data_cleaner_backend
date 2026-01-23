@@ -44,9 +44,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # Include routers
 app.include_router(upload_router)
 app.include_router(payment_router)
+
 
 
 @app.get("/")
@@ -74,3 +76,4 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {"status": "FastAPI backend is working"}
+
