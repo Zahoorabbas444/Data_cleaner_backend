@@ -35,6 +35,10 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+@app.get("/")
+def root():
+    return {"status": "FastAPI backend is working"}
+
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
@@ -43,10 +47,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.get("/")
-def root():
-    return {"status": "FastAPI backend is working"}
 
 
 # Include routers
