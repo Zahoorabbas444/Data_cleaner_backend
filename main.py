@@ -38,7 +38,7 @@ app = FastAPI(
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://data-cleaner-frontend.netlify.app", "http://localhost:5173", "http://localhost:3000", "http://localhost:8000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
