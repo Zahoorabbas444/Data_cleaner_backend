@@ -36,7 +36,7 @@ from services.tier_manager import get_tier_from_token, apply_tier_limits, should
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api", tags=["upload"])
+router = APIRouter( tags=["upload"])
 
 # In-memory job storage (for simplicity - in production use Redis)
 job_store = {}
