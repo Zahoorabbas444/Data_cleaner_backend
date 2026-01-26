@@ -30,8 +30,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(upload_router)
-app.include_router(payment_router)
+app.include_router(upload_router, prefix="/api")
+app.include_router(payment_router, prefix="/api")
 
 @app.get("/")
 async def root():
