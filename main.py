@@ -32,7 +32,7 @@ if env_origins:
     production_origins = [origin.strip() for origin in env_origins.split(",") if origin.strip()]
     allowed_origins = production_origins + default_origins
 else:
-    allowed_origins = ["https://data-cleaner-frontend.netlify.app"] + default_origins
+    allowed_origins = ["https://data-cleaner-project.netlify.app"] + default_origins
 
 app.add_middleware(
     CORSMiddleware,
