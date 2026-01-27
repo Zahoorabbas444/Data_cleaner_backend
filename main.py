@@ -34,8 +34,6 @@ app.add_middleware(
 app.include_router(upload_router, prefix="/api")
 app.include_router(payment_router, prefix="/api")
 
-.
-
 @app.get("/")
 async def root():
     return {"status": "online", "message": "Backend is running on Vercel"}
