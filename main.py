@@ -20,11 +20,21 @@ app = FastAPI(
 )
 
 # FIXED CORS: This must match your Netlify URL exactly
+import os
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from routers.upload import router as upload_router
+
+app = FastAPI()
+
+# This pulls the variable you just set in the Vercel dashboard
+#
+raw_origins = os.getenv("CORS_ORIGINS", "*")
+origins = [origin.strip() for origin in raw_origins.split(",")]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://data-cleaner-project.netlify.app", "http://localhost:5173", "http://localhost:3000", "http://localhost:8000"
-    ],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
