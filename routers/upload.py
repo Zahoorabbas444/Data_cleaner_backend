@@ -95,7 +95,7 @@ async def upload_file(
         "file_path": str(file_path),
         "tier": tier.value,
     }
-
+    
     # Start background processing
     background_tasks.add_task(process_file, job_id, file_path, tier)
 
